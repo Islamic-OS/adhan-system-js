@@ -1,0 +1,19 @@
+{
+  "name": "adhan-system-js",
+  "version": "1.0.0",
+  "main": "./src/main.js",
+  "repository": "https://github.com/Islamic-OS/adhan-system-js.git",
+  "author": "Md. Riyasat Hossain <riyasat.hossain.29@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.26.1",
+    "chalk": "^5.0.1",
+    "express": "^4.17.3",
+    "inquirer": "^8.2.2",
+    "node-navigator": "^1.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
