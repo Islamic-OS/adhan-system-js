@@ -27,7 +27,24 @@ setInterval(() => {
     let lon = position.longitude;
 
     const config = getConfig();
-    let url = `http://islamicfinder.us/index.php/api/prayer_times?`;
+
+    let latitudeQuery = `latitude=${lat}`;
+    let longitudeQuery = `longitude=${lon}`;
+    let timezoneQuery = `timezone=${config.timezone}`;
+    let methodQuery = `method=${config.method}`;
+    let juristicQuery = `juristic=${config.juristic}`;
+    let timeFormatQuery = `timeFormat=${config.time_format}`;
+
+    let queryString = `${latitudeQuery}&${longitudeQuery}&${timezoneQuery}&${methodQuery}&${juristicQuery}&${timeFormatQuery}`;
+
+    let url = `http://islamicfinder.us/index.php/api/prayer_times?${queryString}`;
+
+    axios
+      .get(url)
+      .then((response) => response.data)
+      .then((data) => {
+        console.log(data);
+      });
   });
 }, 1000);
 
